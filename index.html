@@ -20,6 +20,7 @@
 					<li><a href="#overview">Overview</a></li>
 					<li><a href="#problem_formulation">Problem Formulation</a></li>
 					<li><a href="#DATA_COLLECTION">Data Collection</a></li>
+					<li><a href="#DATA_EXPLORATION">Data Exploration</a></li>
 					<!--<li><a href="#data">Data</a></li>
 					<li><a href="#methods">Methods</a></li>
 					<li><a href="#results">Results</a></li>-->
@@ -164,62 +165,81 @@
 								<--<a href="#" class="image featured"><img src="images/Screen Shot 2023-05-07 at 10.05.37 PM.png" alt="" /></a>			
 							</article>
 						</div>
-						<header>
-						<h2>Here is our Data Collection Process:</h2>
-						<!--<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>-->
-					</header>
+
 					</div>
 
 				</div>
 			</article>
-		<!-- Data -->
-			<!--<article id="data" class="wrapper style3">
+		<!-- DATA EXPLORATION -->
+			<article id="DATA_EXPLORATION" class="wrapper style3">
 				<div class="container">
 					<header>
-						<h2>We mined the internet for fake news data.</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
+						<h2>Preprocessing</h2>
 					</header>
 					<div class="row">
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h3><a href="#">Topic</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<h3><a href="#">Handling missing values/ensuring no missing values</a></h3>
+								<p>To handle the missing values, we will be imputing them. In doing so, it will make sure that there are no blank values. For example, since the location of the user in twitter is optional, those who do not have any location placed will be changed to “No Location” instead of a blank. The optional columns (quote tweets, views, rating etc) will also be removed since not all have those information.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Keywords</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<h3><a href="#">Handling outliers</a></h3>
+								<p>The only outliers we expect are tweets with high amounts of engagement (i.e. likes, retweets, replies). However, such tweets are also the most likely to provide significant insights regarding engagement patterns, so we have opted to keep them as is.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Tools</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<h3><a href="#">Ensuring formatting consistency (date, labels, etc.)</a></h3>
+								<p>To ensure that the format is consistent, we will be checking the dates and make sure that the date joined is in the correct format. Having a consistent format will help in the analzation of data as it ensures that the data retrieved is correct since it has the same cnsistent formatting.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-								<h3><a href="#">Tempus dolore</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<h3><a href="#">Normalization/standardization/scaling</a></h3>
+								<p>The two sets of variables that will primarily be used are engagement and satirical content. In the case that multivariate analysis will be performed due to more than one engagement variable being used, language being considered (see next point below), or something similar, we will standardize the data. This is because normalization is more sensitive to outliers, which we have decided to keep.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-								<h3><a href="#">Feugiat aliquam</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<h3><a href="#">Categorical data encoding</a></h3>
+								<p>The main focus of this project lies in satirical vs. non-satirical tweets, and we will simply assign the value 0 to a tweet identified as non-satire and 1 otherwise. However, we are also looking into separating tweets by language; for example, English, Tagalog, Taglish, or others.</p>
+							</article>
+						</div>
+					</div>
+					<header>
+						<h2>Preprocessing</h2>
+					</header>
+					<div class="row">
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<h3><a href="#">Handling missing values/ensuring no missing values</a></h3>
+								<p>To handle the missing values, we will be imputing them. In doing so, it will make sure that there are no blank values. For example, since the location of the user in twitter is optional, those who do not have any location placed will be changed to “No Location” instead of a blank. The optional columns (quote tweets, views, rating etc) will also be removed since not all have those information.</p>
 							</article>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-								<h3><a href="#">Sed amet ornare</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
+								<h3><a href="#">Handling outliers</a></h3>
+								<p>The only outliers we expect are tweets with high amounts of engagement (i.e. likes, retweets, replies). However, such tweets are also the most likely to provide significant insights regarding engagement patterns, so we have opted to keep them as is.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<h3><a href="#">Ensuring formatting consistency (date, labels, etc.)</a></h3>
+								<p>To ensure that the format is consistent, we will be checking the dates and make sure that the date joined is in the correct format. Having a consistent format will help in the analzation of data as it ensures that the data retrieved is correct since it has the same cnsistent formatting.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<h3><a href="#">Normalization/standardization/scaling</a></h3>
+								<p>The two sets of variables that will primarily be used are engagement and satirical content. In the case that multivariate analysis will be performed due to more than one engagement variable being used, language being considered (see next point below), or something similar, we will standardize the data. This is because normalization is more sensitive to outliers, which we have decided to keep.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<h3><a href="#">Categorical data encoding</a></h3>
+								<p>The main focus of this project lies in satirical vs. non-satirical tweets, and we will simply assign the value 0 to a tweet identified as non-satire and 1 otherwise. However, we are also looking into separating tweets by language; for example, English, Tagalog, Taglish, or others.</p>
 							</article>
 						</div>
 					</div>
