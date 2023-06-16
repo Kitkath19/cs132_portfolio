@@ -313,29 +313,30 @@
 				<header>
 					<h2>Machine Learning/Computational Modeling</h2>
 				</header>
+				<--<a href="#" class="image featured"><img src="images/chiL.png" alt="" /></a>
 				<div class="row">
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="box style2">
-							<h3><a href="#">Tokenization and lower casing</a></h3>
-							<p>Tokenization is performed using the NLTK library, which accurately splits up terms in a tweet into its constituent tokens. For lower-casing, Python’s default lower function for strings is good enough for what we’re trying to do. We will also be converting emojis detected into their word counterparts in this portion as part of tokenization.</p>
+							<h3><a href="#">Describe the structure and mechanism of the chosen model.</a></h3>
+							<p>The model utilizes a Complement Naive Bayes classifier to learn the difference between satire and non-satire tweets. Its structure is very similar to that of a Multinomial Naive Bayes classifier used in sentiment analysis. The Complement version is used as it supposedly produces better results as it’s meant to be used for imbalanced data sets, and generally produces better results in comparison to Multinomial.</p>
 						</article>
 					</div>
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="box style2">
 							<h3><a href="#">Train the model using the training data</a></h3>
-							<p>For stop words, we will be referring to both the NLTK library and the Stopwords ISO GitHub repository for the list of stopwords to remove.</p>							
+							<p>We used Grid Search to optimize the alpha value used by the Complement Naive Bayes classifier to get better results.</p>							
 						</article>
 					</div>
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="box style2">
 							<h3><a href="#">Evaluate the model's performance using the appropriate evaluation metrics</a></h3>
-							<p>In stemming for English tweets, we will be using NLTK’s Porter Stemmer to stem the tokens.</p>
+							<p>We have obtained 25 satire and 40 non-satire text tweets for testing. They are sampled and processed the exact same way as the training set.</p>
 						</article>
 					</div>
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="box style2">
 							<h3><a href="#">Evaluation results</a></h3>
-							<p>In stemming for English tweets, we will be using NLTK’s Porter Stemmer to stem the tokens.</p>
+							<p>The Machine Learning Model has a 66% accuracy rate.</p>
 						</article>
 					</div>
 				</div>
