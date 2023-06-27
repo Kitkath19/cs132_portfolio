@@ -245,17 +245,17 @@
 	.container {
 		margin: 0 auto;
 		max-width: calc(100% - 50px);
-		width: 1200px;
+		width: 1400px;
 
 		&.medium {
-			width: (1200px * 0.75);
+			width: (1400px * 0.75);
 		}
 
 		@include breakpoint('<=xlarge') {
-			width: 1200px;
+			width: 1400px;
 
 			&.medium {
-				width: (1200px * 0.75);
+				width: (1400px * 0.75);
 			}
 		}
 
